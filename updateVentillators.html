@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Ventillators</title>
+    <style>
+        .container
+        {
+            margin-top: 10%;
+            margin-left: 25%;
+            clear: both;
+            width:600px;
+            border: 1px solid black;
+            padding: 35px 0px 35px 150px;
+            justify-items: center;
+            background-color: beige;
+            border-radius: 20px;
+        }
+        .container h1{
+            margin-top: 5px;
+            margin-bottom: 50px;
+            font-size: 35px;
+        }
+        .container input{
+            clear: both;
+            width: 250px;
+            height: 25px;
+            border-radius: 10px;
+        }
+        .container label{
+            display: inline-block;
+            font-size: large;
+            width:200px;
+            margin-bottom: 20px;
+        }
+        .container select{
+            height:50px;
+            padding-left:10px ;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        .container button{
+            width: 75px;
+            height: 50px;
+            font-weight: bold;
+            margin-left:185px;
+            margin-top: 30px;
+            background-color: darkolivegreen;
+            color:white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/updateVentillators" method="POST">
+            <label for="Hospital ID">Hospital ID</label>
+            <input type="text" name = "hospitalId">
+            <label for="ventillatorId">Ventillator ID</label>
+            <input type="text" name = "ventillatorId">
+            <label for="ventillatorStatus">Ventillator Status</label>
+            <select name="ventillatorStatus">
+                <option value="Occupied">Occupied</option>
+                <option value="Available">Available</option>
+                <option value="In-Maintenance">In-Maintenance</option>
+            </select>
+            <button type = "submit">Update</button>
+        </form>
+
+    </div>
+</body>
+</html>

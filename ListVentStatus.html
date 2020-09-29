@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Ventillators by its Status</title>
+    <style>
+        .container
+        {
+            margin-top: 10%;
+            margin-left: 25%;
+            clear: both;
+            width:600px;
+            border: 1px solid black;
+            padding: 35px 0px 35px 150px;
+            justify-items: center;
+            background-color: beige;
+            border-radius: 20px;
+        }
+        .container h1{
+            margin-top: 5px;
+            margin-bottom: 50px;
+            font-size: 35px;
+        }
+        
+        .container label{
+            display: inline-block;
+            font-size: large;
+            font-weight: bold;
+            width:200px;
+            margin-bottom: 20px;
+        }
+        .container button{
+            width: 75px;
+            height: 50px;
+            font-weight: bold;
+            margin-left:185px;
+            margin-top: 30px;
+            background-color: darkolivegreen;
+            color:white;
+            border-radius: 10px;
+        }
+        .container select{
+            height:50px;
+            padding-left:10px ;
+            font-size: 20px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>List Ventillators by its Status</h1>
+        <form action="/ListVentStatus" method = "POST">
+            <label for="hospitalId">Select Status</label>
+            <select name="ventillatorStatus">
+                <option value="Occupied">Occupied</option>
+                <option value="Available">Available</option>
+                <option value="In-Maintenance">In-Maintenance</option>
+            </select>
+            <button type = "submit">Search</button>
+        </form>
+    </div>
+</body>
+</html>

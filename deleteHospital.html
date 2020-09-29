@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Hospital</title>
+    <style>
+            .container
+        {
+            margin-top: 10%;
+            margin-left: 25%;
+            clear: both;
+            width:600px;
+            border: 1px solid black;
+            padding: 35px 0px 35px 150px;
+            justify-items: center;
+            background-color: beige;
+            border-radius: 20px;
+        }
+        .container h1{
+            margin-top: 5px;
+            margin-bottom: 50px;
+            font-size: 35px;
+        }
+        .container input{
+            clear: both;
+            width: 250px;
+            height: 25px;
+            border-radius: 10px;
+        }
+        .container label{
+            display: inline-block;
+            font-size: large;
+            width:200px;
+            margin-bottom: 20px;
+        }
+        .container button{
+            width: 75px;
+            height: 50px;
+            font-weight: bold;
+            margin-left:185px;
+            margin-top: 30px;
+            background-color: darkolivegreen;
+            color:white;
+            border-radius: 10px;
+        }
+        .container select{
+            height:50px;
+            padding-left:10px ;
+            font-size: 20px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Delete the Hospital By ID</h1>
+    <form action="/deleteHospital" method = "POST">
+    <label for="hospitalId">Enter the hospital Id</label>
+    <input type="text" name="hospitalId">
+    <button type = "submit">Delete</button>
+    </form>
+</div>
+</body>
+</html>

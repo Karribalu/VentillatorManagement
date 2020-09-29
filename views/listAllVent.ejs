@@ -1,0 +1,59 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of All Hospitals</title>
+    <style>
+      #customers {
+          font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        #customers td, #customers th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+        #customers tr:hover {background-color: #ddd;}
+
+        #customers th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #4CAF50;
+          color: white;
+        }
+    </style>
+</head>
+<body>
+    <table id="customers">
+        <thead>
+          <tr>
+            <th>Hospital ID</th>
+            <th>Vent ID</th>
+            <th>Vent Status</th>
+            <th>Hospital Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%if (records.length >0){ %>
+          <% records.forEach(function(row){ %>
+          <tr>
+            <td><%= row.hospitalId %></td>
+            <td><%= row.ventillatorId %></td>
+            <td><%= row.ventillatorStatus %></td>
+            <td><%= row.hospitalName %></td>
+          </tr>
+          <% })}else{ %>
+            <tr>
+                <td colspan="6">No Record Found</td>
+                
+              </tr>
+            <% } %>
+        </tbody>
+      </table>
+</body>
+</html>
